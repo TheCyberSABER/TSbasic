@@ -1,0 +1,177 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,100&family=Rubik+Dirt&family=Shrikhand&display=swap" rel="stylesheet">
+    
+    <style>
+     body {
+  margin: 0;
+  font-family: 'Rubik Dirt',cursive;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  background-image: url(https://source.unsplash.com/random/1920x1080/?wallpaper,seashore,citynight,slightdark);
+  background-size: cover;
+  overflow: hidden;
+ /*  background-repeat: no-repeat; */
+        
+  
+}
+
+.name{
+        text-transform: uppercase;
+        color: floralwhite;
+        font-family: 'Raleway',sans-serif;
+        letter-spacing: 5px;
+        text-decoration: underline;
+        background-color: rgba(0, 0, 0, 0.4);
+        font-size: 3.4rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 6rem;
+  text-align: center;
+  color: whitesmoke;
+  font-family: 'Raleway',sans-serif;
+  
+  
+  
+  
+}
+
+.clock {
+  display: flex;
+}
+
+.clock div {
+  margin: 5px;
+  position: relative;
+}
+
+.clock span {
+  width: 100px;
+  height: 100px;
+  background: black;
+  opacity: 0.8;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.clock .text {
+  height: 30px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, red ,aquamarine);
+  /*bg = variable with static body bg img*/
+  opacity: 0.8; 
+}
+#hour{
+        font-family: 'Raleway',sans-serif;
+}
+#min{
+        font-family: 'Raleway',sans-serif;
+}
+#sec{
+        font-family: 'Raleway',sans-serif;
+}
+
+.clock #ampm {
+  bottom: 0;
+  position: absolute;
+  width: 60px;
+  height: 30px;
+  font-size: 20px;
+  background: rebeccapurple;
+}
+        
+            
+            
+    </style>
+  </head>
+  <body>
+          
+                  
+          <h1 class="name">by THE SABER</h1>
+          
+          
+    <h2>Digital Clock</h2>
+    <div class="clock">
+      <div>
+        <span id="hour">00</span>
+        <span class="text">Hours</span>
+      </div>
+      <div>
+        <span id="min">00</span>
+        <span class="text">Minutes</span>
+      </div>
+      <div>
+        <span id="sec">00</span>
+        <span class="text">Seconds</span>
+      </div>
+      <div>
+        <span id="ampm">AM</span>
+      </div>
+    </div>
+    <script> 
+    //js file begans here 
+
+
+
+console.log("Hello world")
+const hourEl = document.getElementById("hour");
+const minuteEl = document.getElementById("min");
+const secondEl = document.getElementById("sec");
+const ampmEl = document.getElementById("ampm");
+
+function updateClock() {
+        let h = new Date().getHours();
+        let m = new Date().getMinutes();
+        let s = new Date().getSeconds();
+        let ampm = "AM";
+
+        if (h > 12) {
+                h = h - 12;
+                ampm = "PM";
+        }
+
+        h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m;
+        s = s < 10 ? "0" + s : s;
+
+        hourEl.innerText = h;
+        minuteEl.innerText = m;
+        secondEl.innerText = s;
+        ampmEl.innerText = ampm;
+        setTimeout(() => {
+                updateClock();
+        }, 1000);
+}
+
+updateClock();
+
+
+
+
+    
+    
+    </script>
+  </body>
+</html>
