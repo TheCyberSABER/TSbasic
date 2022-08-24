@@ -7,12 +7,12 @@
 
 
 #logo {
-        margin: 35px 45px;
+        margin: 34px 4px;
 }
 
 #logo img {
-        height: 59px;
-        margin: 6px 9px
+        height: 100px;
+        margin: 20px 30px
 }
 
 .nav-list {
@@ -104,7 +104,7 @@
         font-family: 'Square Peg', cursive;
         color: orange;
         text-align: center;
-        font-size: 1.5rem;
+        font-size: 2rem;
 }
 
 .h-primary {
@@ -127,4 +127,5 @@
         color: white;
 }
 
+ 
  
