@@ -6,14 +6,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title> Random Pix</title>
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;1,100&family=Rubik+Dirt&family=Shrikhand&display=swap" rel="stylesheet">
+    
 
 
                 <style>
                         * {
                                 margin: 0;
                                 padding: 0;
-                                height: 24.789vh;
+                                
                                 background-color: black;
                         }
 
@@ -23,17 +26,23 @@
                                 height: vh;
                                 width: 53.4vh;
                                 border: 10px inset black;
+                                height: 24.789vh;
                                 
-                                z-index: -1
+                                z-index: -1;
                         }
 
                         .msg {
-                                font-family: 'baloo', cursive;
+                                font-family: 'Raleway',sans-serif;
                                 letter-spacing: 6px;
                                 text-transform: uppercase;
                                 color: antiquewhite;
                                 margin: 10px;
                                 padding 10px;
+                                
+                        }
+                        #reset{
+                              color: white;
+                              
                         }
                 </style>
 
@@ -65,7 +74,7 @@
         <img src="https://source.unsplash.com/random/1920x1080/?wallpaper,cars" alt="RandomPictures" class="pic">
         
         
-      <button type="reset">Tap here for New Images</button>
+      <button id= "reset" type="reset">Tap here for New Images</button>
 </body>
 <script>
 
